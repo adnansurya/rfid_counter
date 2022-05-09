@@ -49,27 +49,29 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="white-box">
-                        <h3 class="box-title">Di Dalam Ruangan</h3>                          
+                        <h3 class="box-title">Log</h3>                          
                             <div class="table-responsive">
                                 <table class="table text-nowrap">
                                     <thead>
                                         <tr>
                                             <th class="border-top-0">No.</th>
                                             <th class="border-top-0">ID Kartu</th>
-                                            <th class="border-top-0">Waktu Checkin</th>                                           
+                                            <th class="border-top-0">Status</th>
+                                            <th class="border-top-0">Waktu</th>                                           
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                             include 'db_access.php';
-                                            $load = mysqli_query($conn, "SELECT * FROM rfid_checkin ORDER BY waktu DESC");
+                                            $load = mysqli_query($conn, "SELECT * FROM rfid_log ORDER BY id_log DESC");
                                             $nomor = 1;   
                                             //melakukan iterasi pada seluruh data log
                                             while ($row = mysqli_fetch_array($load)){                                                
                                                 echo '<tr>';
                                                 echo '<td>'.$nomor.'</td>';
-                                                echo '<td>'.$row['id_card'].'</td>'; //menampilkan id log ke dalam tabel                                            
-                                                echo '<td>'.$row['waktu'].'</td>'; //menampilkan nilai suhu ke dalam tabel
+                                                echo '<td>'.$row['id_card'].'</td>';
+                                                echo '<td>'.$row['stat'].'</td>'; 
+                                                echo '<td>'.$row['waktu'].'</td>';
                                                 echo '</tr>';  
                                                 $nomor++;
                                             }   
