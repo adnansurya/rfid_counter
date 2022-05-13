@@ -42,10 +42,10 @@ $waktu = $date->format('Y-m-d H:i:s');
             
     if (!mysqli_query($conn,$sql)){            
        
-        $response = 'Error LOG';
+        $response = 'ERROR LOG';
     }
 
 
-    echo $status.PHP_EOL.$response;
+    echo 'RES:'.$response;
 }
 ?>

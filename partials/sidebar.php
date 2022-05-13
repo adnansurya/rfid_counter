@@ -16,7 +16,7 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="log.php"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
-                                <span class="hide-menu">Profile</span>
+                                <span class="hide-menu">Log</span>
                             </a>
                         </li>                        
                     </ul>
